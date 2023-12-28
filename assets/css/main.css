@@ -334,6 +334,11 @@ section#about a:hover{
     color: #2188ff;
 }
 
+section#about img {
+    margin-bottom: 15px;
+    border-radius: 60px;
+}
+
 @media only screen and (max-width: 500px) {
     section#about p {
         width: 90%;
