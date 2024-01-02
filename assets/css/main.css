@@ -296,15 +296,35 @@ section div.lineContainer div.line {
     line-height: 0;
 }
 
+#template {
+    text-align: center;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.col {
+    width: 300px;
+    margin: 0 10px;
+}
+
+
 div.row {
     width: 100%;
-    display: block;
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
     text-align: center;
 }
 div.row div.col {
     width: 300px;
-    display: inline-block;
+    margin: 15px 10px;
 }
+
 
 /* About Section CSS */
 section#about {
