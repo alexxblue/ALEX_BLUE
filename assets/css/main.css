@@ -434,11 +434,37 @@ section#download {
     padding: 75px 0;
     text-align: center;
 }
+
+#download {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .video-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .video-container iframe, video {
+    margin: 18px;
+  }
+
 section#download p {
     width: 500px;
     display: inline-block;
     margin-bottom: 25px;
 }
+
+section div.lineContainer2 div.line {
+    width: 500px;
+    height: 4px;
+    display: inline-block;
+    background-color: #000000;
+    margin: 8px;
+    line-height: 0;
+}
+
 section#download a {
     height: 55px;
     font-size: 25px;
@@ -456,6 +482,12 @@ section#download a {
 section#download a:hover {
     background-color: #2155ff;
     border-color: #2155ff;
+}
+
+.lista-logos img{
+    border-radius: 50%;
+    width: 120px;
+    margin: 10px;
 }
 @media only screen and (max-width: 500px) {
     section#download p {
