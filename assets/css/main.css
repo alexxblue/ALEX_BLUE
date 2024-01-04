@@ -489,12 +489,21 @@ section#download a:hover {
     width: 120px;
     margin: 10px;
 }
+
 @media only screen and (max-width: 500px) {
     section#download p {
         width: 90%;
     }
     section#download h1.headerLine {
         font-size: 32.5px;
+    }
+    p {
+        display: block; /* O podrías querer mantener inline-block pero con un ancho diferente */
+        width: auto; /* O un porcentaje específico */
+    }
+    section div.lineContainer2 div.line {
+        display: block;
+        width: auto;
     }
 }
 
