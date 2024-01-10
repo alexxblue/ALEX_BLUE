@@ -520,6 +520,82 @@ section#download a:hover {
     margin: 10px;
 }
 
+
+
+
+
+
+/* Testimonios CSS */
+
+/* Testimonios CSS */
+
+.testimonios-container {
+    background-color: #f3f3f3;
+    text-align: center;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.testimonios-container h2 {
+    color: #5a5a5a;
+    margin-bottom: 10px;
+}
+
+.testimonio {
+    background-color: #ffffff;
+    display: none; /* Ocultar todos los testimonios por defecto */
+    padding: 15px;
+    border-radius: 8px;
+    margin: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Mostrar solo el testimonio activo */
+.testimonio.active {
+    display: inline-block;
+}
+
+.testimonio-texto {
+    font-style: italic;
+    color: #333333;
+}
+
+.autor-testimonio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.autor-testimonio .emoji {
+    font-size: 24px;
+}
+
+.nombre-autor {
+    font-weight: bold;
+    color: #333333;
+    margin-left: 5px;
+}
+
+.indicadores {
+    margin-top: 10px;
+}
+
+.circulo {
+    height: 10px;
+    width: 10px;
+    background-color: #bbbbbb;
+    display: inline-block;
+    border-radius: 50%;
+    margin: 0 5px;
+}
+
+.circulo.activo {
+    background-color: #7a7a7a;
+}
+
+
+
 @media only screen and (max-width: 500px) {
     section#download p {
         /* width: 90%; */
@@ -535,6 +611,25 @@ section#download a:hover {
     section div.lineContainer2 div.line {
         display: block;
         width: auto;
+    }
+
+    .container li p {
+        padding-left: 0.5em;
+        padding-right: 0.5em;
+    }
+
+    .container li q {
+        font-size: 1em;
+    }
+
+    .container li img {
+        width: 2em;
+        padding-left: -1em;
+        padding-right: 0.25em;
+    }
+
+    .container h2 {
+        font-size: 20px;
     }
 }
 

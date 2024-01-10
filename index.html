@@ -148,7 +148,82 @@
         </div>
         <br>
 
+
 <!-- Testimonios -->
+
+<div class="testimonios-container">
+    <h2>Testimonios</h2>
+
+    <div class="testimonio active">
+        <p class="testimonio-texto">“Lorem ipsum dolor sit amet.”</p>
+        <div class="autor-testimonio">
+            <span class="emoji">😊</span>
+            <span class="nombre-autor">NR Producciones</span>
+        </div>
+    </div>
+
+    <div class="testimonio">
+        <p class="testimonio-texto">“Otro testimonio interesante.”</p>
+        <div class="autor-testimonio">
+            <span class="emoji">👍</span>
+            <span class="nombre-autor">Empresa XYZ</span>
+        </div>
+    </div>
+
+    <div class="testimonio">
+        <p class="testimonio-texto">“Lorem ipsum dolor sit amet, consectetur adipiscing elit.”</p>
+        <div class="autor-testimonio">
+            <span class="emoji">😄</span>
+            <span class="nombre-autor">Cliente Satisfecho</span>
+        </div>
+    </div>
+
+    <div class="testimonio">
+        <p class="testimonio-texto">“¡Excelente servicio y atención al cliente!”</p>
+        <div class="autor-testimonio">
+            <span class="emoji">🌟</span>
+            <span class="nombre-autor">Usuario Feliz</span>
+        </div>
+    </div>
+
+    <div class="testimonio">
+        <p class="testimonio-texto">“Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.”</p>
+        <div class="autor-testimonio">
+            <span class="emoji">👏</span>
+            <span class="nombre-autor">Cliente Feliz</span>
+        </div>
+    </div>
+
+    <div class="indicadores">
+        <span class="circulo activo" onclick="mostrarTestimonio(1)"></span>
+        <span class="circulo" onclick="mostrarTestimonio(2)"></span>
+        <span class="circulo" onclick="mostrarTestimonio(3)"></span>
+        <span class="circulo" onclick="mostrarTestimonio(4)"></span>
+        <span class="circulo" onclick="mostrarTestimonio(5)"></span>
+    </div>
+</div>
+
+<script>
+    function mostrarTestimonio(n) {
+        // Ocultar todos los testimonios
+        var testimonios = document.getElementsByClassName("testimonio");
+        for (var i = 0; i < testimonios.length; i++) {
+            testimonios[i].classList.remove("active");
+        }
+
+        // Mostrar el testimonio seleccionado
+        testimonios[n - 1].classList.add("active");
+
+        // Actualizar el estado de los indicadores
+        var indicadores = document.getElementsByClassName("circulo");
+        for (var i = 0; i < indicadores.length; i++) {
+            indicadores[i].classList.remove("activo");
+        }
+        indicadores[n - 1].classList.add("activo");
+    }
+</script>
+
+
 
 
 
