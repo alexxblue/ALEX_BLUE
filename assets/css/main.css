@@ -668,6 +668,24 @@ section#download a:hover {
     }
 }
 
+/* 3D */
+
+.imágenes3d {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.imágenes3d img {
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.568);
+    margin: 10px;
+    box-sizing: border-box;  
+}
+
 /* Contact Section CSS */
 section#contact {
     padding: 75px 0;
