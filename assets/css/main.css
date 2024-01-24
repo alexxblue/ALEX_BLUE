@@ -526,7 +526,9 @@ section#download a:hover {
     margin: 10px;
 }
 
-
+.últimotexto {
+    margin: 15px;
+}
 
 
 
@@ -610,8 +612,9 @@ section#download a:hover {
 }
 
 .compromiso p {
-    margin: 5%;
+    margin: 10% 5% 5% 5%;
 }
+
 
 
 @media only screen and (max-width: 500px) {
@@ -649,6 +652,19 @@ section#download a:hover {
     .container h2 {
         font-size: 20px;
     }
+
+    .vídeolyly {
+        min-width: 600px; /* Elimina el ancho mínimo */
+        width: 100%; /* Ajusta el ancho al 90% del contenedor padre */
+        margin: 5% auto; /* Ajusta el margen superior e inferior al 5%, y el margen izquierdo y derecho a 'auto' */
+    }
+
+    .vídeolyly > div {
+        width: 100%; /* Ajusta el ancho del contenedor interno al 100% */
+        margin-top: 0; /* Elimina el margen superior */
+        margin-bottom: 0; /* Elimina el margen inferior */
+    }
+    
 }
 
 @media only screen and (max-width: 700px) {
@@ -658,6 +674,19 @@ section#download a:hover {
         width: auto;
         margin: 5%;
     }
+    
+    .vídeolyly {
+        min-width: auto; /* Elimina el ancho mínimo */
+        width: 90%; /* Ajusta el ancho al 90% del contenedor padre */
+        margin: 5% auto; /* Ajusta el margen superior e inferior al 5%, y el margen izquierdo y derecho a 'auto' */
+    }
+
+    .vídeolyly > div {
+        width: 100%; /* Ajusta el ancho del contenedor interno al 100% */
+        margin-top: 0; /* Elimina el margen superior */
+        margin-bottom: 0; /* Elimina el margen inferior */
+    }
+
 }
 
 @media only screen and (max-width: 900px) {
@@ -667,9 +696,23 @@ section#download a:hover {
         width: auto;
         margin: 5%;
     }
+    
 }
 
 /* 3D */
+
+.box3d {
+    margin: 20px auto;
+    max-width: 25%;
+    display: flex;
+    flex-direction: column; /* Alinear elementos en columna */
+    justify-content: center;
+    align-items: center;
+    padding: 4px;
+    border: solid 5px;
+    border-color: #2155ff;
+    margin-top: 50px;
+}
 
 .imágenes3d {
     display: flex;
@@ -778,4 +821,30 @@ footer ul.links a svg path {
 }
 footer ul.links a svg:hover path {
     fill: #414f57;
+}
+
+
+/* Animaciones */
+
+@keyframes show {
+    from {
+        opacity: 0;
+        scale: 25%;
+    }
+
+    to {
+        opacity: 1;
+        scale: 100%;
+    }
+}
+
+.mifoto {
+    view-timeline-name: --image;
+    view-timeline-axis: block;
+
+    animation-timeline: --image;
+    animation-name: show;
+
+    animation-range: entry 25% cover 30%;
+    animation-fill-mode: both;
 }
