@@ -31,6 +31,8 @@ header h1 {
     font-weight: 600;
     line-height: 80px;
     margin-bottom: 30px;
+    display: block;
+    text-align: center;
 }
 header ul {
     height: 50px;
@@ -50,7 +52,12 @@ header ul a.download {
     border: 1px solid #2188ff;
     background-color: #2188ff;
     transition: background-color 0.25s ease-in-out, border-color 0.25s ease-in-out;
-    margin-right: 10px;
+    margin: 20px 60px;
+    margin-top: 150px;
+    width: 30%;
+    display: block;
+    text-align: center;
+    align-items: center;
 }
 header ul a.download:hover {
     background-color: #2155ff;
@@ -62,10 +69,25 @@ header ul a.learnMore {
     cursor: pointer;
     border: 1px solid rgba(255, 255, 255, 0.6);
     transition: background-color 0.25s ease-in-out,border-color 0.25s ease-in-out,color 0.25s ease-in-out;
+    margin: 20px 60px;
+    width: 30%;
+    display: block;
+    text-align: center;
 }
 header ul a.learnMore:hover {
     background-color: rgba(255, 255, 255, 0.1);
     border-color: #fff;
+    
+}
+
+.Subtítulo {
+    position: relative;
+    text-align: center;
+    text-size-adjust: 100%;
+    box-sizing: border-box;
+    color: rgb(255, 255, 255);
+    display: block;
+    font-weight: 16px;
 }
 
 @media only screen and (max-width: 875px) {
