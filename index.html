@@ -9,7 +9,10 @@
     <link rel="icon" href="https://html5rocket.github.io/assets/img/favicon.ico">
     <link rel="stylesheet" href="assets/css/main.css">
 
-    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <!-- Añadir la biblioteca Swiper -->
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
 
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,600,700,900" rel="stylesheet"></head>
 <body>
@@ -195,7 +198,13 @@
 <div class="testimonios-container">
     <h2>Testimonios</h2>
 
-    <div class="testimonio active">
+    <!-- Contenedor del Slider -->
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+
+    <!-- Testimonios individuales como slides -->
+
+    <div class="swiper-slide">
         <p class="testimonio-texto">“Blue es un buen profesional con el que da gusto trabajar. Buen cámara y excelente editor.”</p>
         <div class="autor-testimonio">
             <span class="emoji">😊</span>
@@ -203,7 +212,7 @@
         </div>
     </div>
 
-    <div class="testimonio">
+    <div class="swiper-slide">
         <p class="testimonio-texto">“ESPECTACULAR la edición.
             La verdad que muy acertado con la música y la animación del texto con sonido,
             buscaba literalmente esto
@@ -214,7 +223,7 @@
         </div>
     </div>
 
-    <div class="testimonio">
+    <div class="swiper-slide">
         <p class="testimonio-texto">“Alex! Mi enhorabuena amigo por el vídeo! Todos los que lo han visto les ha encantado! Buen trabajo!
             Estamos juntos! ❤”</p>
         <div class="autor-testimonio">
@@ -223,7 +232,7 @@
         </div>
     </div>
 
-    <div class="testimonio">
+    <div class="swiper-slide">
         <p class="testimonio-texto">“No puedo parar de ver el vídeo en bucle,
             encima el tema me encanta jajajaja. Me parece flipante vaya, las transiciones y todo están increíbles 👌🏻”</p>
         <div class="autor-testimonio">
@@ -232,7 +241,7 @@
         </div>
     </div>
 
-    <div class="testimonio">
+    <div class="swiper-slide">
         <p class="testimonio-texto">“Habéis hecho un trabajo increíble, la mejor semana santa de todas las que llevamos, no nos ha faltado ningún detalle. Gracias a todos y enhorabuena.”</p>
 
         <p>”Muchas gracias por la realización de hoy,
@@ -243,34 +252,28 @@
         </div>
     </div>
 
-    <div class="indicadores">
-        <span class="circulo activo" onclick="mostrarTestimonio(1)"></span>
-        <span class="circulo" onclick="mostrarTestimonio(2)"></span>
-        <span class="circulo" onclick="mostrarTestimonio(3)"></span>
-        <span class="circulo" onclick="mostrarTestimonio(4)"></span>
-        <span class="circulo" onclick="mostrarTestimonio(5)"></span>
-    </div>
+    <!-- Agrega la paginación (puntos indicadores) -->
+    <div class="swiper-pagination"></div>
 </div>
 
 
+
 <script>
-    function mostrarTestimonio(n) {
-        // Ocultar todos los testimonios
-        var testimonios = document.getElementsByClassName("testimonio");
-        for (var i = 0; i < testimonios.length; i++) {
-            testimonios[i].classList.remove("active");
-        }
-
-        // Mostrar el testimonio seleccionado
-        testimonios[n - 1].classList.add("active");
-
-        // Actualizar el estado de los indicadores
-        var indicadores = document.getElementsByClassName("circulo");
-        for (var i = 0; i < indicadores.length; i++) {
-            indicadores[i].classList.remove("activo");
-        }
-        indicadores[n - 1].classList.add("activo");
-    }
+   var mySwiper = new Swiper('.swiper-container', {
+    // ... Otras opciones
+    effect: 'coverflow',
+    grabCursor: true,
+    centeredSlides: true,
+    slidesPerView: 'auto',
+    coverflowEffect: {
+        rotate: 0, // Ajusta según sea necesario
+        stretch: 0, // Ajusta según sea necesario
+        depth: 100, // Ajusta según sea necesario
+        modifier: 1, // Ajusta según sea necesario
+        slideShadows: false, // Puedes ajustar esto según tus preferencias
+    },
+    initialSlide: 2, // Ajusta para que el elemento central esté en el medio
+});
 </script>
 
 
