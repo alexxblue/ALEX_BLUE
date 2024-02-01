@@ -46,32 +46,36 @@ header ul a {
     color: #fff;
 }
 
-header ul a.download {
-    display: inline-block;
+.downloadscrollLink {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;  /* Alinea los elementos en columna */
     cursor: pointer;
     border: 1px solid #2188ff;
     background-color: #2188ff;
     transition: background-color 0.25s ease-in-out, border-color 0.25s ease-in-out;
-    margin: 20px 60px;
-    margin-top: 150px;
-    width: 30%;
-    display: block;
+    margin: 20px auto;  /* Auto para centrar horizontalmente */
+    max-width: 300px;  /* Establece un ancho máximo para evitar que sea demasiado largo en pantallas grandes */
     text-align: center;
-    align-items: center;
 }
-header ul a.download:hover {
+
+.downloadscrollLink:hover {
     background-color: #2155ff;
     border-color: #2155ff;
 }
 
+
 header ul a.learnMore {
-    display: inline-block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;  /* Alinea los elementos en columna */
     cursor: pointer;
     border: 1px solid rgba(255, 255, 255, 0.6);
     transition: background-color 0.25s ease-in-out,border-color 0.25s ease-in-out,color 0.25s ease-in-out;
-    margin: 20px 60px;
-    width: 30%;
-    display: block;
+    margin: 20px auto;  /* Auto para centrar horizontalmente */
+    max-width: 300px;  /* Establece un ancho máximo para evitar que sea demasiado largo en pantallas grandes */
     text-align: center;
 }
 header ul a.learnMore:hover {
@@ -81,6 +85,16 @@ header ul a.learnMore:hover {
 }
 
 .Subtítulo {
+    position: relative;
+    text-align: center;
+    text-size-adjust: 100%;
+    box-sizing: border-box;
+    color: rgb(255, 255, 255);
+    display: block;
+    font-weight: 16px;
+}
+
+.TEXTOINICIAL {
     position: relative;
     text-align: center;
     text-size-adjust: 100%;
